@@ -27,12 +27,12 @@ and event base program by using observable sequences.
 https://reactivex.io/   -> Community ->   Github
 
 # Operator
-1- Just Operator
-2- From Operator
-3- From Iterator Operator
-4- Range Operator
-5- Repeat Operator
-6- Interval Operator
-7- Timer Operator
-8- Create Operator
+* 1- Just Operator
+* 2- From Operator
+* 3- From Iterator Operator
+* 4- Range Operator
+* 5- Repeat Operator
+* 6- Interval Operator
+* 7- Timer Operator
+* 8- Create Operator
 
