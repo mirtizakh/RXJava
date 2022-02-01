@@ -33,4 +33,6 @@ https://reactivex.io/   -> Community ->   Github
 4- Range Operator
 5- Repeat Operator
 6- Interval Operator
+7- Timer Operator
+8- Create Operator
 

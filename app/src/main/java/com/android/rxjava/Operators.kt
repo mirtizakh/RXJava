@@ -107,5 +107,14 @@ fun repeatOperator(): Observable<Int> {
 
 fun intervalOperator(): Observable<Long> {
     return Observable.interval(1, TimeUnit.SECONDS).takeWhile { value -> value <= 10 }
+
+    /* with initial delay , that appear only one time in start
+       return Observable.interval(5,1, TimeUnit.SECONDS).takeWhile { value -> value <= 10 }
+
+     */
+}
+
+fun timerOperator(): Observable<Long> {
+    return Observable.timer(5, TimeUnit.SECONDS)
 }
 
