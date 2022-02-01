@@ -110,11 +110,27 @@ fun intervalOperator(): Observable<Long> {
 
     /* with initial delay , that appear only one time in start
        return Observable.interval(5,1, TimeUnit.SECONDS).takeWhile { value -> value <= 10 }
-
      */
 }
 
+// Timer operator will call only 1 time after the delay
 fun timerOperator(): Observable<Long> {
     return Observable.timer(5, TimeUnit.SECONDS)
+}
+
+fun createOperator(): Observable<Int> {
+    return Observable.create {
+
+        try {
+            for (i in numList) {
+                it.onNext(i * 5)
+            }
+            // If we don't call onComplete() here , onComplete() will not call from observer side
+            it.onComplete()
+        } catch (e: Exception) {
+            it.onError(e)
+        }
+
+    }
 }
 
