@@ -2,6 +2,7 @@ package com.android.rxjava
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 
 class MainActivity : AppCompatActivity() {
     companion object{
@@ -12,7 +13,21 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
+        // justOperator()
+        // fromOperator()
+        // fromIterableOperator()
 
+        rangeOperator().subscribe(
+            {
+                Log.d(TAG, "onNext $it")
+            },
+            {
+                Log.d(TAG, "onError ${it.toString()}")
+            },
+            {
+                Log.d(TAG, "onComplete")
+            }
+        )
 
     }
 }
