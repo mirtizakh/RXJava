@@ -1,4 +1,4 @@
-#Introduction
+# Introduction
 
 A lot of people don't know there's a difference between RxJava and RxAndroid.
 It's not much a of a difference, but it's recommended to get the most recent RxJava dependency, along with the most recent RxAndroid dependency.
