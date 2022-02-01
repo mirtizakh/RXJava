@@ -26,3 +26,7 @@ and event base program by using observable sequences.
 
 https://reactivex.io/   -> Community ->   Github
 
+# Operator
+1- Just Operator
+2- From Operator
+
