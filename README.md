@@ -29,5 +29,8 @@ https://reactivex.io/   -> Community ->   Github
 # Operator
 1- Just Operator
 2- From Operator
-3- Range Operator
+3- From Iterator Operator
+4- Range Operator
+5- Repeat Operator
+6- Interval Operator
 

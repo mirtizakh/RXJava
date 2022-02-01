@@ -5,10 +5,11 @@ import com.android.rxjava.MainActivity.Companion.TAG
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.Observer
 import io.reactivex.rxjava3.disposables.Disposable
+import java.util.concurrent.TimeUnit
 
-val numList =  mutableListOf<Int>(1,2,3,4,5,6,7,8,9,10,11,12)
-val numArray1 =  arrayOf<Int>(1,2,3,4,5,6,7,8,9,10,11,12)
-val numArray2 =  arrayOf(1,2,3,4,5,6,7,8,9,10,11,12)
+val numList = mutableListOf<Int>(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+val numArray1 = arrayOf<Int>(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+val numArray2 = arrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
 
 fun justOperator() {
     val observable = Observable.just(1)
@@ -43,7 +44,7 @@ fun justOperator() {
 
 }
 
-fun fromOperator(){
+fun fromOperator() {
     // From operator convert various other objects and data types into Observables
     // Unlike just, From() creates an Observable from set of items using an Iterable, which means each item is emitted one at a time.
 
@@ -71,7 +72,7 @@ fun fromOperator(){
     observable.subscribe(observer)
 }
 
-fun fromIterableOperator(){
+fun fromIterableOperator() {
     val observable = Observable.fromIterable(numList)
 
     val observer = object : Observer<Int> {
@@ -96,6 +97,15 @@ fun fromIterableOperator(){
     observable.subscribe(observer)
 }
 
-fun rangeOperator() : Observable<Int>{
-   return Observable.range(1,10)
+fun rangeOperator(): Observable<Int> {
+    return Observable.range(1, 10)
 }
+
+fun repeatOperator(): Observable<Int> {
+    return Observable.range(1, 10).repeat(2)
+}
+
+fun intervalOperator(): Observable<Long> {
+    return Observable.interval(1, TimeUnit.SECONDS).takeWhile { value -> value <= 10 }
+}
+

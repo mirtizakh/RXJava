@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         // fromOperator()
         // fromIterableOperator()
 
-        rangeOperator().subscribe(
+        /* rangeOperator().subscribe(
             {
                 Log.d(TAG, "onNext $it")
             },
@@ -27,7 +27,30 @@ class MainActivity : AppCompatActivity() {
             {
                 Log.d(TAG, "onComplete")
             }
-        )
+        ) */
 
+         /* repeatOperator().subscribe(
+            {
+                Log.d(TAG, "onNext $it")
+            },
+            {
+                Log.d(TAG, "onError ${it.toString()}")
+            },
+            {
+                Log.d(TAG, "onComplete")
+            }
+        ) */
+
+        /* intervalOperator().subscribe(
+            {
+                Log.d(TAG, "onNext $it")
+            },
+            {
+                Log.d(TAG, "onError ${it.toString()}")
+            },
+            {
+                Log.d(TAG, "onComplete")
+            }
+        ) */
     }
 }
